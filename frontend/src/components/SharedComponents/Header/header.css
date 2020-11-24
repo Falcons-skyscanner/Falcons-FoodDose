@@ -1,23 +1,20 @@
-#login{
+.Header{
+    padding: .6rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245, .90);
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.Header__logo{
+    width: 4rem;
+    object-fit: contain;
+}
+
+.header-right {
     float: right;
-    margin-left: 80%;
-    margin-top: 0%;
-    font-weight: bold;
-    font-family: "Ubuntu";
-}
-
-.header{
-    display:fixed;
-    position: relative;
-   
-}
-.appbar{
-    margin-top: 0;
-    background-color: white;
-}
-#fooddose{
-    font: 45px 'Ravi Prakash', cursive ;
-    color: #F69624;
-    margin-top: 0%;
-
-}
+  }

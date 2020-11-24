@@ -32,7 +32,7 @@
     {
         "Name": "ALQuds Resturant",
         "Image": "data:image/jpeg;base64,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",
-        "Phone": "+972 2-221-3833",
+        "Phone": "0222977733",
         "Address": "Ras AlJura-Hebron"
     },
     {
@@ -50,19 +50,19 @@
     {
         "Name": "Safienat al sayad",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t31.0-0/p206x206/27023891_561616187525112_5927665775725300479_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=1WoO5Zyt4OEAX-kDovw&_nc_oc=AQnfUVGhU4SUa2rmrnH88p6q9tAKeUJEzikNR_zXyv93YrUIhN5fy4xdB8suYgAdjmY&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=21eb26a393231a561ecc0d5ab157ec83&oe=5FDA4C8E",
-        "Phone": "02-2294081",
+        "Phone": "022294081",
         "Address": "Ras AlJura-Hebron"
     },
     {
         "Name": "Royal resturant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/11218856_876696205776687_727177950781805578_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=k4SErDHzNzIAX8ZUFhv&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=95b354d27d46a7b012a79889f974df67&oe=5FDCDA2F",
-        "Phone": "02-2294081",
+        "Phone": "022294081",
         "Address": "Al Haras street-Hebron"
     },
     {
         "Name": "Mr Baker",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/11057513_1141764292516481_7986922780190078436_n.png?_nc_cat=107&ccb=2&_nc_sid=7aed08&_nc_ohc=Vze3D6aSGJ8AX9dyBDU&_nc_ht=scontent.fjrs4-1.fna&oh=47675fe7f395895225c3b4a5d47c6834&oe=5FDAC340",
-        "Phone": "02-2221777",
+        "Phone": "022221777",
         "Address": "Ras AlJura-Hebron"
     },
     {
@@ -86,13 +86,13 @@
     {
         "Name": "Golden Rooster",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/29495881_1580463318668676_7959416436416315392_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=tRXvqtpUNoAAX-DVKTs&_nc_oc=AQkHJ0qwy6td_RHdW6H7okAeu-hcKoTv6InzmHQjBXT-Hjzwd1rOW7oruMcJ1lNtUW8&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=bfd26278ea30ea50b63866a3b48d904a&oe=5FDAA998",
-        "Phone": "02-2216115",
+        "Phone": "022216115",
         "Address": "Namera street-Hebron"
     },
     {
         "Name": "Al Sham Resturant",
         "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOokOdOdjhi7AsTjTE8-IWBdJGpDmtmMDfw&usqp=CAU",
-        "Phone": "02-2291172",
+        "Phone": "022291172",
         "Address": "Ras AlJura-Hebron"
     },
     {
@@ -104,7 +104,7 @@
     {
         "Name": "Ward Restaurant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/90229186_2758666261028233_6529146619806351360_o.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=3_gbSW667hIAX-Tk4PR&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=4c249adf7c47faf7861833adf2877cf7&oe=5FDC15D0",
-        "Phone": "02-2220335",
+        "Phone": "022220335",
         "Address": "Ain Arab street-Hebron"
     },
     {
@@ -122,7 +122,7 @@
     {
         "Name": "Zuwar Restaurant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/80812782_1018300865184215_2238701301598781440_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=c-OIK0PxBKoAX9dAG72&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=99765885c0db6057cbcb2b91386ad1c2&oe=5FDA662A",
-        "Phone": " 02-2226644",
+        "Phone": " 022226644",
         "Address": "Ras AlJura-Hebron"
     },
     {
@@ -134,13 +134,13 @@
     {
         "Name": "Kalimari Fish Restaurant",
         "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzuGhh4VJuJCQDFdJavcTrHHpwmGGcfcFhUw&usqp=CAU",
-        "Phone": "02-2294939",
+        "Phone": "022294939",
         "Address": "Al Salam street-Hebron"
     },
     {
         "Name": "Hawana Restaurant & cafe",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/29541784_1949322555142914_5542376996732549593_n.jpg?_nc_cat=110&ccb=2&_nc_sid=174925&_nc_ohc=AvVhR-6S2E8AX9rLSBb&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=1002ecd5cae668a1b0fdba49d76fdedb&oe=5FDB2966",
-        "Phone": "02-2256166",
+        "Phone": "022256166",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -158,7 +158,7 @@
     {
         "Name": "Coffee Corner",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/31882977_189409458357622_8188058462073126912_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=a2bEkn8q0OUAX9cyJYP&_nc_oc=AQlU6WZnEM4UCQ2IPqyo9HeN_ywc996z_H6wLQFaswVPKAnBzB6QW38CnNQnjkfpQDs&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=720b28077e14e6d355cdbdb83cf48d85&oe=5FDB03CF",
-        "Phone": "02-2255943",
+        "Phone": "022255943",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -170,13 +170,13 @@
     {
         "Name": "Nutella",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/13775886_1050852138341732_6881970660672133177_n.jpg?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=fUpZ3knsEhUAX__3auD&_nc_ht=scontent.fjrs4-1.fna&oh=13b3ef43d14b00c275413da0eacf61ef&oe=5FDC7974 ",
-        "Phone": "02-2292244",
+        "Phone": "022292244",
         "Address": "Ain Sara street-Hebron"
     },
     {
         "Name": "Karamello",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/25289432_1316740035098167_8483058895701726359_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=qNOrR_tzctsAX_KVZHJ&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=db51e932ac9beb318665168efacdb530&oe=5FDBE13B",
-        "Phone": "02-2224790",
+        "Phone": "022224790",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -188,25 +188,25 @@
     {
         "Name": "Sara Cafee",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/s206x206/119897079_619085555454701_638892154095158482_o.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=JgEQZoj7hvUAX84ylAp&_nc_ht=scontent.fjrs4-1.fna&tp=7&oh=a8311ab4869c25b8214195cab12d0c8a&oe=5FDA1FB9",
-        "Phone": "02-2250703",
+        "Phone": "022250703",
         "Address": "Ain Sara street-Hebron"
     },
     {
         "Name": "Fratello",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/12027759_911004388990235_5037291439232041310_n.jpg?_nc_cat=108&ccb=2&_nc_sid=174925&_nc_ohc=8FoLndN4LeoAX-9tU5B&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=93dbe19234f59f51c1a458d720967d2f&oe=5FD9C2E6",
-        "Phone": "02-2211780",
+        "Phone": "022211780",
         "Address": "Ras AlJura-Hebron"
     },
     {
         "Name": "Kit cake",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/123078805_3561972170490542_4855966044049904980_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=n2Quc-TnPNEAX-t2jis&_nc_oc=AQkJEWVR2BtdNT4d7O-lc6VJm8lDhN_2WFHFuUGIgtNTuNUae4vkkobZzpxev6716jE&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=415a239b329c072a18386b3139ab90f0&oe=5FDC598F",
-        "Phone": "02-2212371",
+        "Phone": "022212371",
         "Address": "Ain Sara street-Hebron"
     },
     {
         "Name": "Karameh Sweets and Cake",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/13230203_1155955891122831_5447779305302878449_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=NMCg4HCA2r4AX-rJpm2&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=844f1134ed9e1bdaeca80a703b11cb97&oe=5FDA9751",
-        "Phone": "02-2212885",
+        "Phone": "022212885",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -218,19 +218,19 @@
     {
         "Name": "Al Sahel Al Akhdar Sweets",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/1044524_991316250929066_2733891215439952367_n.jpg?_nc_cat=103&ccb=2&_nc_sid=85a577&_nc_ohc=lxKCWVMLmZ8AX8o7wC5&_nc_ht=scontent.fjrs4-1.fna&oh=7b830e1162c30248347b95ecc38c2501&oe=5FDC86EC",
-        "Phone": "02-2250785",
+        "Phone": "022250785",
         "Address": "Ain Sara street-Hebron"
     },
     {
         "Name": "Sidra Sweets",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/37200829_262219264582688_4246184224228376576_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=_6cuSMwjhqsAX-mTIcD&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=ad25b78f5cde69a0c5b09e9b0005d9cb&oe=5FDA88CD",
-        "Phone": "02-2214141",
+        "Phone": "022214141",
         "Address": "Hebron University street"
     },
     {
         "Name": "Pizza one",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t31.0-8/p960x960/22254677_1502323843195017_569180221215907570_o.png?_nc_cat=104&ccb=2&_nc_sid=85a577&_nc_ohc=MQe4Am8KfRYAX-pFWen&_nc_ht=scontent.fjrs4-1.fna&oh=2766dcdd77fce775faecd1ead62c6d62&oe=5FDB1DA6",
-        "Phone": "02-2222112",
+        "Phone": "022222112",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -248,13 +248,13 @@
     {
         "Name": "Orient House Restaurant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/p960x960/79934539_1284946271698544_8883810827216355328_o.jpg?_nc_cat=111&ccb=2&_nc_sid=85a577&_nc_ohc=LKSg9W6DZyEAX-QXezl&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=d1a4f0f2060e8a4aaa8b0847fa6c69fe&oe=5FD9C929",
-        "Phone": "02-2211525",
+        "Phone": "022211525",
         "Address": "Ibn Rushd square-Hebron"
     },
     {
         "Name": "Pizza Home",
         "Image": "https://shobiddak.com/uploads/picture/daleel/name/10080/thumb_logo.jpg",
-        "Phone": "02-2252952",
+        "Phone": "022252952",
         "Address": "Hebron"
     },
     {
@@ -266,7 +266,7 @@
     {
         "Name": "Beit jeddi",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t31.0-8/p960x960/18423045_1531607376910145_7158048697369720473_o.jpg?_nc_cat=110&ccb=2&_nc_sid=85a577&_nc_ohc=P1-jE26t9xUAX8SlYS2&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=041d083565d3546d5e21ce94ae1f6e65&oe=5FDC528F",
-        "Phone": "02-2222729",
+        "Phone": "022222729",
         "Address": "Ain Arab street-Hebron"
     },
     {
@@ -290,25 +290,25 @@
     {
         "Name": "Roza Resturant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/31509976_182376465741164_8266230835410108416_n.png?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=sXlw03gLjaEAX9W3hu8&_nc_ht=scontent.fjrs4-1.fna&oh=aaa62f5c38a3f02dfb3f88d9cff17dd2&oe=5FDAF16E",
-        "Phone": "02-2214839",
+        "Phone": "022214839",
         "Address": "Al Haras street-Hebron"
     },
     {
         "Name": "Talet Jabal",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/p206x206/24312926_1772930189678401_3825741668349176768_n.jpg?_nc_cat=105&ccb=2&_nc_sid=09cbfe&_nc_ohc=vG3N9ab3xqsAX8NUTho&_nc_ht=scontent.fjrs4-1.fna&tp=6&oh=8f9f582221f1ce31dbb366e1e2e3c032&oe=5FDCE930",
-        "Phone": "02-2259724",
+        "Phone": "022259724",
         "Address": "Dwear ban-Hebron"
     },
     {
         "Name": "Al Salaymah bakerie",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/c39.0.206.206a/p206x206/125761457_2849757628637554_4466273692628133311_n.jpg?_nc_cat=109&ccb=2&_nc_sid=e3f864&_nc_ohc=WfxLwc3x1aAAX_WDYWX&_nc_ht=scontent.fjrs4-1.fna&tp=27&oh=8dc5d0d2980c7ee74ff9ba54e48cb564&oe=5FDB5548",
-        "Phone": "02-220944",
+        "Phone": "02220944",
         "Address": "Al Salam street-Hebron"
     },
     {
         "Name": "Fanoun bakerie",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/95668325_1966227063509716_3839660901032525824_n.jpg?_nc_cat=105&ccb=2&_nc_sid=85a577&_nc_ohc=oOpL4EyLnLoAX8wfsm6&_nc_ht=scontent.fjrs4-1.fna&oh=7d6d40c0eb2ef90e0db05262aa4e5d99&oe=5FDDB760",
-        "Phone": " 02-2227339",
+        "Phone": " 022227339",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -326,7 +326,7 @@
     {
         "Name": "Queen Plaza Resturant",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t31.0-0/c34.0.206.206a/p206x206/12748145_911752692275853_4070073567893556458_o.jpg?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=dnqR5yHeRogAX-At8BX&_nc_ht=scontent.fjrs4-1.fna&tp=27&oh=95b92c91e1fecde001895f4c5e6cf84e&oe=5FDD3DC7",
-        "Phone": "00972 2-222-3222",
+        "Phone": "0097222223222",
         "Address": "Ain Sara street-Hebron"
     },
     {
@@ -338,7 +338,7 @@
     {
         "Name": "Lokma Turkish sweet",
         "Image": "https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-0/s206x206/91540003_132028438376091_7966444587755503616_o.jpg?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=rUAoEdOQs9YAX-uq138&_nc_ht=scontent.fjrs4-1.fna&tp=7&oh=b86a9d61aa92523ee9a6848f807a445c&oe=5FDC2C86",
-        "Phone": "02-2244424",
+        "Phone": "022244424",
         "Address": "Hebron University street"
     },
     {

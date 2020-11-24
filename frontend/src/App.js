@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Footer from './components/SharedComponents/Footer/footer.js';
+import Header from './components/SharedComponents/Header/header.js'
 import Login from '../src/components/Pages/LogIn/LogIn.js'
 import SignUp from '../src/components/Pages/Signup/signUp.js';
 import Home from './components/Pages/Home/home';
 import Restaurants from './components/Pages/Restaurants/Restaurants'
 import Menu from './components/Pages/Menu/Menu'
+
 
 //My imports
 import Panel from './components/Pages/Panel/Panel'
@@ -51,6 +53,7 @@ class App extends Component {
         return (
             <div className="App" >
                 <div>
+                    <Header/>
 
                     <Switch>
                         <Route path="/panel" exact render={() => <Panel />} />
@@ -64,11 +67,10 @@ class App extends Component {
                         {/* <Route path="/" exact render={() => <categories />} /> */}
                         {/* <Route path="/category/:id" exact render={() => <Resturants />} /> */}
                     </Switch>
+                    <Footer/>
 
                 </div>
-                {/* <div className="footer">
-                    <Footer />
-                </div> */}
+                
             </div>
         );
     }
