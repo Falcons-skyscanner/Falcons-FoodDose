@@ -3,13 +3,15 @@ import React from 'react';
 import './home.css'
 // import Logout from '../logout/logout.js'
 import Category from './Category';
+import { Button } from '@material-ui/core'
+import { Link } from "react-router-dom";
 // import Title from '../../rest-toDelete/Title/title'
 
 
 
 class Home extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             categories: []
         }
@@ -29,9 +31,14 @@ class Home extends React.Component {
     render() {
         const { categories } = this.state
         return (
-            <div class='categories'>
+            <div>
+                <div class='categories'>
+                    {
+                        categories ? categories.map((categ, i) => <Category category={categ} key={i} />) : <div></div>
+                    }
+                </div>
                 {
-                    categories? categories.map( (categ , i) => <Category category={categ} key={i} /> ):<div></div>
+                    this.props.adminId && this.props.login ? <Link to='/admin'><Button> Go to admin Panel </Button></Link> : <div></div>
                 }
             </div>
         );

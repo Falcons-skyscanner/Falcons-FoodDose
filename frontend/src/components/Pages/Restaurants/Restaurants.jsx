@@ -35,9 +35,11 @@ class Restaurants extends React.Component {
         return (
             <div>
                 <h1>Resturant</h1>
+                <div className='restaurants'>
                 {
                     restaurants? restaurants.map( (rest , i) => <Restaurant restaurant={rest} key={i} /> ):<div></div>
                 }
+                </div>
             </div>
         )
     }

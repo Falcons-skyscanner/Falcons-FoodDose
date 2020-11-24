@@ -26,6 +26,16 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
         minlength : 6
+    },
+    role: {
+        type : String
+    },
+    request: {
+        type: Boolean
+    },
+    restaurant: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Restaurant'
     }
 }, { timestamps: true })
 

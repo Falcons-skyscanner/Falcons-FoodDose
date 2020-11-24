@@ -4,17 +4,24 @@ import { Input, Button, MenuItem, Select } from '@material-ui/core'
 import './Panel.css'
 
 class Panel extends React.Component {
-    state = {
-        resName: '',
-        resImg: '',
-        resPhone: '',
-        resAddress: '',
-        catId: '',
-        restId: '',
-        random: '',
-        categories: []
-
+    constructor(){
+        super()
+        
+        this.state = {
+            resName: '',
+            resImg: '',
+            resPhone: '',
+            resAddress: '',
+            catId: '',
+            restId: '',
+            random: '',
+            categories: [],
+    
+        }
     }
+    
+
+    
 
     componentDidMount = () => {
         this.getCat()
@@ -23,7 +30,7 @@ class Panel extends React.Component {
     handleChange = (e) => {
         const { name, value } = e.target
         this.setState({ [name]: value })
-        console.log(value)
+        // console.log(value)
     }
 
     getCat = () => {
@@ -76,10 +83,10 @@ class Panel extends React.Component {
 
 
     render() {
-        const { resName, resImg, resPhone, resAddress, catId, categories } = this.state
+        const { resName, resImg, resPhone, resAddress, catId, categories,newInput,random } = this.state
         return (
             <div className='Panel'>
-                <Select value={catId} onChange={this.handleSelect}>
+                <Select value={catId} onChange={this.handleSelect} style={{width:'30%'}}>
                     {
                         categories.map((cat, i) => <MenuItem key={i} value={cat._id}>{cat.Name}</MenuItem>)
                     }
@@ -122,7 +129,6 @@ class Panel extends React.Component {
                         onChange={this.handleChange} />
                     <Button type='submit' variant="outlined" color="primary" > Add Res </Button>
                 </form>
-                
                 {/* <h1> {catId} </h1> */}
             </div>
         )

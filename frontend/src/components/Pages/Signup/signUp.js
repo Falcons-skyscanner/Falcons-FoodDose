@@ -29,8 +29,9 @@ class SignUp extends Component {
                 localStorage.setItem('userId' , data.user._id)
                 this.props.setEmail(data.user.email)
                 this.props.setName(data.user.name)
+                this.props.setLogin(true)
                 console.log(data)
-                this.props.otherProps.history.push('/home')
+                this.props.otherProps.history.push('/')
             });
     }
 
@@ -91,7 +92,7 @@ class SignUp extends Component {
                                 type="submit"
                                 size="large"
                                 variant="contained"
-                                justifyContent="center"
+                                
                             >
                                 Signup</Button>
                         </FormControl><br /><br />
