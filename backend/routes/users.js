@@ -118,6 +118,13 @@ router.post('/ownerrest', (req, res) => {
         .catch((err) => res.status(401).json({ success: false, err }))
 })
 
+router.get('/alluser', (req, res) => {
+    
+    User.find()
+        .then((users) => res.status(201).json({ success: true, count : users.length }))
+        .catch((err) => res.status(401).json({ success: false, err }))
+})
+
 
 
 

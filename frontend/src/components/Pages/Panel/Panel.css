@@ -21,8 +21,8 @@
 }
 
 .Panel__profile {
-    flex: .25;
-    padding: 25px;
+    flex: .20;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,7 @@
 }
 
 .Panel__menu {
-    width: 70%;
+    flex: .8;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -64,7 +64,7 @@
 }
 
 .admin__users{
-    flex: .75;
+    flex: .80;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -73,8 +73,8 @@
 }
 
 .Aprofile {
-    flex: .25;
-    padding: 25px;
+    flex: .20;
+    /* padding: 25px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,14 +84,14 @@
 }
 
 .Aprofile__img{
-    width: 70%;
+    width: 50%;
     object-fit: contain;
     border-radius: 150px;
 }
 
 .admin__user {
     margin-top: 50px;
-    width: 50%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;

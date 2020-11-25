@@ -59,6 +59,14 @@ router.post('/restCategoryById/:id', (req, res) => {
     })
 });
 
+router.get('/getAllrest' , (req,res) => {
+  Restaurant.find()
+  .exec( (err, rests) => {
+    if(err) return res.status(401).success({success:false,err})
+    res.status(200).json({ count : rests.length })
+  } )
+})
+
 
 
 

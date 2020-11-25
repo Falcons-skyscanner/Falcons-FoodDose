@@ -6,15 +6,21 @@ import AdminStatus from './AdminStatus'
 
 
 class AdminPanel extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            reqUsers: []
+            reqUsers: [],
+            userCount : 0,
+            restCount : 0,
+            catCount : 0
         }
     }
 
     componentDidMount = () => {
         this.getUsers()
+        this.getAllUsers()
+        this.getAllRest()
+        this.getAllCateg()
     }
 
     getUsers = () => {
@@ -52,15 +58,64 @@ class AdminPanel extends React.Component {
             .then(data => this.getUsers())
     }
 
+    getAllRest = () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-rest': localStorage.getItem('auth-rest')
+            },
+        };
+        fetch('http://localhost:5000/restaurant/getAllrest', requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(length)
+                this.setState({ restCount: data.count })
+            })
+    }
+
+    getAllUsers = () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-rest': localStorage.getItem('auth-rest')
+            },
+        };
+        fetch('http://localhost:5000/users/alluser', requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                this.setState({ userCount: data.count })
+            } )
+    }
+
+    getAllCateg = () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-rest': localStorage.getItem('auth-rest')
+            },
+        };
+        fetch('http://localhost:5000/categories/getCategories', requestOptions)
+            .then(response => response.json())
+                .then(data => {
+                    console.log('cat',data)
+                    this.setState({ catCount: data.categories.length })
+            })
+    }
+
 
 
     render() {
-        const { reqUsers } = this.state
+        const { reqUsers,userCount,restCount,catCount } = this.state
+        const { name , email} = this.props
         return (
             <div className='admin'>
-                <AdminProfile email={'any'} name={'any'} />
+                <AdminProfile email={email} name={name} />
                 <div className='admin__users'>
-                    <AdminStatus/>
+                    <AdminStatus userCount={userCount} restCount={restCount} catCount={catCount}/>
                     {
                         reqUsers.map((user, i) => (
                             <div className='admin__user' key={i} >

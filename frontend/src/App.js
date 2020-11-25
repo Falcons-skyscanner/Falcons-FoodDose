@@ -78,7 +78,7 @@ class App extends Component {
 
                         <Route path="/panel" exact render={() => ownerId?  <Panel name={name} email={email} ownerId={ownerId}/> : <Redirect to='/' />} />
                         <Route path="/" exact render={() => <Home />} />
-                        <Route path="/admin" exact render={() => (adminId) ? <AdminPanel /> : <Redirect to='/' />} />
+                        <Route path="/admin" exact render={() => (adminId) ? <AdminPanel name={name} email={email} /> : <Redirect to='/' />} />
                         <Route path="/login" exact render={(props) => <Login setEmail={this.setEmail} setName={this.setName} setUser={this.setUser} setOwner={this.setOwner} setLogin={this.setLogin} setAdmin={this.setAdmin} otherProps={props} />} />
                         <Route path="/signup" exact render={(props) => <SignUp setEmail={this.setEmail} setName={this.setName} setLogin={this.setLogin} setUser={this.setUser} otherProps={props} />} />
                         <Route path="/category/:id" exact render={(props) => <Restaurants otherProps={props} />} />
