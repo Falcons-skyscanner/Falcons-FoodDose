@@ -82,7 +82,7 @@ class App extends Component {
                         <Route path="/login" exact render={(props) => <Login setEmail={this.setEmail} setName={this.setName} setUser={this.setUser} setOwner={this.setOwner} setLogin={this.setLogin} setAdmin={this.setAdmin} otherProps={props} />} />
                         <Route path="/signup" exact render={(props) => <SignUp setEmail={this.setEmail} setName={this.setName} setLogin={this.setLogin} setUser={this.setUser} otherProps={props} />} />
                         <Route path="/category/:id" exact render={(props) => <Restaurants otherProps={props} />} />
-                        <Route path="/restaurant/:id" exact component={Menu} />
+                        <Route path="/restaurant/:id" exact render={(props) => <Menu otherProps={props} name={name}/>} />
 
                     </Switch>
 

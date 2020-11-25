@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuItem from './MenuItem';
 import Restaurant from '../Restaurants/Restaurant'
-import { Button } from '@material-ui/core'
+import StripeButton from './Stripe'
 import './Menu.css'
 
 const Menu = (props) => {
@@ -9,31 +9,34 @@ const Menu = (props) => {
     const [menu, setMenu] = React.useState([]);
     const [food, setFood] = React.useState([]);
 
-    const restId = props.match.params.id
+    const restId = props.otherProps.match.params.id
     const userId = localStorage.getItem('userId') || localStorage.getItem('ownerId') || localStorage.getItem('adminId')
     React.useEffect(() => {
         // console.log(getMenu);
         getMenu({ restId })
 
-        console.log(menu);
-        // return () => console.log('unmounting...')
-    }, [restId, food]);
+        // console.log(menu)
+
+    }, [restId]);
 
     const addCartItem = (item) => {
         // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
-        let arr = [].concat(food)
+        let arr = [...food]
         const exist = arr.find(cartItem => cartItem._id === item._id)
         if (exist) {
-            if (!exist.count) {
-                exist.count = 2
-            } else {
-                exist.count += 1
-            }
-            setFood(arr)
+            exist.count += 1
         } else {
-            arr.push(item)
-            setFood(arr)
+            arr.push({ ...item, count: 1 })
         }
+        setFood(arr)
+
+    }
+
+    const price = (array) => {
+
+        return array.reduce((acc, item) => acc + (item.price * item.count), 0)
+
+
     }
 
     const getMenu = (obj) => {
@@ -49,7 +52,8 @@ const Menu = (props) => {
 
 
     // console.log(props.match.params.id, menu);
-    // console.log('>>', food)
+    const newPrice = price(food)
+    console.log(newPrice)
     return (
         <div className="restaurantMenu">
             <div className='restaurantDetail__menu'>
@@ -73,15 +77,13 @@ const Menu = (props) => {
                         return <div key={i}>
                             <h4>{item.type}</h4>
                             <h5>${item.price}</h5>
-                            {
-                                item.count>0?
-                            <h5>#{item.count}</h5>:<div></div>
-                            }
+                            <h5>#{item.count}</h5>
+
                         </div>
                     })
                 }
                 {
-                    food.length > 0 ? <Button variant="contained" >Buy</Button> : <div>Empty cart</div>
+                    food.length > 0 ? <StripeButton name={props.name} userId={userId} price={newPrice}/> : <div>Empty cart</div>
                 }
             </div>
         </div>

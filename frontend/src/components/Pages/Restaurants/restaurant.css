@@ -42,13 +42,13 @@
 
 
 
-h1 {
+.restaurant__details h1 {
     font-family: "Times New Roman", Times, serif;;
     font-size: 20px;
     text-align: center;   
 }
 
-p{
+.restaurant__details p{
     font-family: "Times New Roman", Times, serif;;
     font-size: 15px;
     text-align: center;
