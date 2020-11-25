@@ -83,7 +83,7 @@ const Menu = (props) => {
                     })
                 }
                 {
-                    food.length > 0 ? <StripeButton name={props.name} userId={userId} price={newPrice}/> : <div>Empty cart</div>
+                    ((food.length > 0) && userId) ? <StripeButton name={props.name} food={food} restId={restId} userId={userId} price={newPrice}/> : <div>{userId ? 'Empty Card' : 'Login First to order please'}</div>
                 }
             </div>
         </div>
