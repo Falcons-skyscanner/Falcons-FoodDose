@@ -16,7 +16,6 @@ class Panel extends React.Component {
             restId: '',
             random: '',
             categories: [],
-
         }
     }
 

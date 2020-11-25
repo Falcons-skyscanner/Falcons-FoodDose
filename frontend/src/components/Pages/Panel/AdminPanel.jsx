@@ -63,7 +63,6 @@ render() {
                         <Button onClick={() => this.makeOwnder({userId: user._id})}> Accept user's request </Button>
                         <Button onClick={() => this.removeRequest({userId: user._id})} > Remove request </Button>
                     </div>
-
                 ))
             }
         </div>

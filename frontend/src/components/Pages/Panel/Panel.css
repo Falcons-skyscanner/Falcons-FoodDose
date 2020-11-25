@@ -3,13 +3,11 @@
     flex-direction: column;
     align-items: center;
 }
-
 .Panel__category{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .Panel__resturant{
     display: flex;
     flex-direction: column;
