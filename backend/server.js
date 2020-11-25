@@ -19,6 +19,7 @@ app.use('/restaurant', require('./routes/resturants'));
 app.use('/categories', require('./routes/categories'));
 app.use('/menu', require('./routes/menu'));
 app.use('/credit', require('./routes/credit'));
+app.use('/orders', require('./routes/orders'));
 
 const port = process.env.PORT || 5000
 
