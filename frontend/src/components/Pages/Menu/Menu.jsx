@@ -1,8 +1,12 @@
 import React from 'react'
 import MenuItem from './MenuItem';
 import Restaurant from '../Restaurants/Restaurant'
+
 import { Button } from '@material-ui/core'
 import OpenSelect from '../../SharedComponents/OpenSelect'
+
+import StripeButton from './Stripe'
+
 import './Menu.css'
 
 const Menu = (props) => {
@@ -10,26 +14,31 @@ const Menu = (props) => {
     const [menu, setMenu] = React.useState([]);
     const [food, setFood] = React.useState([]);
 
-    const restId = props.match.params.id
+    const restId = props.otherProps.match.params.id
     const userId = localStorage.getItem('userId') || localStorage.getItem('ownerId') || localStorage.getItem('adminId')
     React.useEffect(() => {
         // console.log(getMenu);
         getMenu({ restId })
 
+
         // console.log(menu);
         // return () => console.log('unmounting...')
     }, [restId, food]);
+
 
     const addCartItem = (item) => {
         // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
         let arr = [...food]
         const exist = arr.find(cartItem => cartItem._id === item._id)
         if (exist) {
+
             return
+
         } else {
             arr.push({ ...item, count: 1 })
         }
         setFood(arr)
+
     }
 
     const removeCartItem = (item) => {
@@ -52,6 +61,16 @@ const Menu = (props) => {
         const exist = arr.find(cartItem => cartItem._id === item._id)
         exist.count = counter
         setFood(arr)
+
+
+    }
+
+    const price = (array) => {
+
+        return array.reduce((acc, item) => acc + (item.price * item.count), 0)
+
+
+
     }
 
     const getMenu = (obj) => {
@@ -67,7 +86,10 @@ const Menu = (props) => {
 
 
     // console.log(props.match.params.id, menu);
-    console.log('>>food>>', food)
+
+    const newPrice = price(food)
+    console.log(newPrice)
+
     return (
         <div className="restaurantMenu">
             <div className='restaurantDetail__menu'>
@@ -88,6 +110,7 @@ const Menu = (props) => {
                 <h2>Cart</h2>
                 {
                     food.map((item, i) => {
+
                         return <div key={i} className='cart__item'>
                             <h4 className='cart__text'>{item.type}</h4>
                             <div className='cart__price'>
@@ -96,11 +119,12 @@ const Menu = (props) => {
                                     <OpenSelect key={i} updateOpenSelect={updateOpenSelect} item={item} removeCartItem={removeCartItem} />
                                 </div>
                             </div>
+
                         </div>
                     })
                 }
                 {
-                    food.length > 0 ? <Button variant="contained" >Buy</Button> : <div>Empty cart</div>
+                    ((food.length > 0) && userId) ? <StripeButton name={props.name} food={food} restId={restId} userId={userId} price={newPrice}/> : <div>{userId ? 'Empty Card' : 'Login First to order please'}</div>
                 }
             </div>
         </div>
