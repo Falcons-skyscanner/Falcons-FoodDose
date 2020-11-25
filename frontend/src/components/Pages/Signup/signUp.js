@@ -22,13 +22,15 @@ class SignUp extends Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('users/signup', requestOptions)
+        fetch('http://localhost:5000/users/signup', requestOptions)
             .then(response => response.json())
             .then(data => {
-                localStorage.setItem('auth-rest' , data.token)
-                localStorage.setItem('userId' , data.user._id)
+                localStorage.setItem('auth-rest', data.token)
+                localStorage.setItem('userId', data.user._id)
                 this.props.setEmail(data.user.email)
                 this.props.setName(data.user.name)
+
+                this.props.setUser(data.user.user._id)
                 this.props.setLogin(true)
                 console.log(data)
                 this.props.otherProps.history.push('/')
@@ -41,7 +43,7 @@ class SignUp extends Component {
         // console.log(value)
     }
 
-    handleSubmit = (e) =>{
+    handleSubmit = (e) => {
         e.preventDefault()
         this.postReq(this.state)
     }
@@ -92,7 +94,7 @@ class SignUp extends Component {
                                 type="submit"
                                 size="large"
                                 variant="contained"
-                                
+
                             >
                                 Signup</Button>
                         </FormControl><br /><br />
@@ -101,7 +103,7 @@ class SignUp extends Component {
 
                 </Box>
 
-            </div >
+            </div>
         );
     }
 }

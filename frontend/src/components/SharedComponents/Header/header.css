@@ -1,19 +1,52 @@
-.header{
+.header {
+    padding: .4rem 0.6rem 0rem .6rem;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
-    background-color:  white
-    
+    background-color: rgb(245, 245, 245, .90);
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
 }
 
-  
-.header__logo{
-    width: 50px;
+.header__link {
+    display: flex;
+    justify-content: center;
+}
+
+.header__link h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(226, 76, 59);
+}
+
+.header__logo {
+    width: 65px;
     object-fit: contain;
+    border-radius: 100px;
 }
 
-.header__titles{
+.header__titles {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logbtn {
+    margin: 2px 15px;
+}
+
+#logbtn{
+    color: white;
+    background-color: rgb(226, 76, 59);
+    display:inline-block;
+}
+
+.dialog {
+    margin: 0px 5px;
+}
+
+.avatar{
+    text-decoration: none;
+    margin: 0px 10px;
 }

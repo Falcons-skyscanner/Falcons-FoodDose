@@ -41,7 +41,7 @@ class App extends Component {
                 'auth-rest': localStorage.getItem('auth-rest')
             },
         };
-        fetch('users/auth', requestOptions)
+        fetch('http://localhost:5000/users/auth', requestOptions)
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -66,19 +66,23 @@ class App extends Component {
     setLogin = (boolean) => this.setState({ login: boolean })
 
     render() {
-        const { name, email, adminId, userId, login } = this.state
-        console.log('name and email are', name + email)
+
+        const { name, email, adminId, userId, login, ownerId } = this.state
+
+        // console.log('name and email are', name + email)
         return (
             <div className="App" >
                 <div>
-                    <Header userId={userId} setAdmin={this.setAdmin} setOwner={this.setOwner} setUser={this.setUser} login={login} setLogin={this.setLogin} />
+                    <Header adminId={adminId} ownerId={ownerId} userId={userId} setAdmin={this.setAdmin} setOwner={this.setOwner} setUser={this.setUser} login={login} setLogin={this.setLogin} />
                     <Switch>
-                        <Route path="/panel" exact render={() => <Panel />} />
-                        <Route path="/" exact render={() => <Home adminId={adminId} login={login} />} />
+
+
+                        <Route path="/panel" exact render={() => ownerId?  <Panel name={name} email={email} ownerId={ownerId}/> : <Redirect to='/' />} />
+                        <Route path="/" exact render={() => <Home />} />
                         <Route path="/admin" exact render={() => (adminId) ? <AdminPanel /> : <Redirect to='/' />} />
                         <Route path="/login" exact render={(props) => <Login setEmail={this.setEmail} setName={this.setName} setUser={this.setUser} setOwner={this.setOwner} setLogin={this.setLogin} setAdmin={this.setAdmin} otherProps={props} />} />
                         <Route path="/signup" exact render={(props) => <SignUp setEmail={this.setEmail} setName={this.setName} setLogin={this.setLogin} setUser={this.setUser} otherProps={props} />} />
-                        <Route path="/category/:id" exact component={Restaurants} />
+                        <Route path="/category/:id" exact render={(props) => <Restaurants otherProps={props} />} />
                         <Route path="/restaurant/:id" exact component={Menu} />
 
                     </Switch>

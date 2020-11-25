@@ -1,31 +1,125 @@
-.Panel{
+.Panel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.Panel__form {
+    flex: .75;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Panel__select {
+    flex: .2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.Panel__profile {
+    flex: .25;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(245, 245, 245, .90);
+    border-radius: 0px 0px 50px 0px ;
+}
+
+.Panel__category {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Panel__category{
+.Panel__resturant {
+    flex: .8;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    /* margin-left: 40px; */
 }
 
-.Panel__resturant{
+.Panel__menu {
+    width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 20px;
+    /* align-items: center; */
 }
 
-.admin{
+.admin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.admin__user{
+.admin__user {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.Oprofile {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Oprofile__restaurant{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.Oprofile__restaurant h4{
+    margin: 10px;
+
+}
+
+.Oprofile__img {
+    width: 70%;
+    object-fit: contain;
+    border-radius: 150px;
+}
+
+.rest__img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.width {
+    width: 100% !important;
+}
+
+.form__button {
+    margin-top: 15px !important;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-left: 60px;
+}
+
+.menuItem{
+    margin: 10px;
 }

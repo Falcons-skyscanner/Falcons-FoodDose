@@ -11,7 +11,7 @@ class Restaurants extends React.Component {
 
     componentDidMount() {
         console.log(this.props)
-        const categoryId = this.props.match.params.id
+        const categoryId = this.props.otherProps.match.params.id
         this.getRestaurants({ categoryId})
     }
 
@@ -21,7 +21,7 @@ class Restaurants extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('/restaurant/getRestaurants', requestOptions)
+        fetch('http://localhost:5000/restaurant/getRestaurants', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -30,7 +30,7 @@ class Restaurants extends React.Component {
     }
 
     render() {
-        console.log(this.props.match.params.id)
+        console.log(this.props.otherProps.match.params.id)
         const {restaurants} = this.state
         return (
             <div>

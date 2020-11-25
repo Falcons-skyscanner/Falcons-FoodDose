@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var foodScheema = new Schema({
+var itemScheema = new Schema({
     type:
     {
         type: String
@@ -18,6 +18,6 @@ var foodScheema = new Schema({
 })
 
 
-let Food = mongoose.model('Food', foodScheema);
+let Item = mongoose.model('Item', itemScheema);
 
-module.exports = Food
+module.exports = Item

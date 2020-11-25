@@ -22,7 +22,7 @@ const auth = async (req, res, next) => {
     }
   } catch {
 
-    res.status(404).json({ success: false, text: 'Log in first please' })
+    res.status(401).json({ success: false, text: 'Log in first please' })
   }
 }
 

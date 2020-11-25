@@ -24,7 +24,7 @@ export default function DialogHeader({ userId }) {
 
     const handleClose2 = () => {
         setOpen(false);
-        postReq({userId})
+        postReq({ userId })
     };
 
     const postReq = (obj) => {
@@ -43,9 +43,9 @@ export default function DialogHeader({ userId }) {
 
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+            <Button id='logbtn' variant="contained" onClick={handleClickOpen}>
                 Join Our Team
-      </Button>
+            </Button>
             <Dialog
                 open={open}
                 TransitionComponent={Transition}
@@ -54,19 +54,19 @@ export default function DialogHeader({ userId }) {
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle>
+                <DialogTitle id="alert-dialog-slide-title">{"Do you want to add your restaurant to our site ?"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
-                        Do you want to make a request so you can add your resturant to our site ??
-          </DialogContentText>
+                        * monthly/yearly fees ...
+                    </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose1} color="primary">
-                        Disagree
-          </Button>
+                        Cancel
+                    </Button>
                     <Button onClick={handleClose2} color="primary">
-                        Agree
-          </Button>
+                        Subscribe
+                    </Button>
                 </DialogActions>
             </Dialog>
         </div>

@@ -103,6 +103,22 @@ router.post('/owner' , (req,res) => {
         .catch( (err) => res.status(401).json({success:false,err}) )
 })
 
+router.post('/rest' , (req,res) => {
+    console.log(req.body)
+    User.findOneAndUpdate({ '_id': req.body.ownerId } ,{ 'restaurant': req.body.restId }).populate('restaurant')
+        .then( (user) => res.status(201).json({success:true,user}) )
+        .catch( (err) => res.status(401).json({success:false,err}) )
+})
+
+router.post('/ownerrest' , (req,res) => {
+    console.log(req.body)
+    User.findOne({ '_id': req.body.ownerId } ).populate('restaurant')
+        .then( (user) => res.status(201).json({success:true,user}) )
+        .catch( (err) => res.status(401).json({success:false,err}) )
+})
+
+
+
 
 
 module.exports = router

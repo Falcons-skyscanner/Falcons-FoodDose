@@ -23,7 +23,7 @@ class AdminPanel extends React.Component {
                 'auth-rest': localStorage.getItem('auth-rest')
             },
         };
-        fetch('users/getrequsers', requestOptions)
+        fetch('http://localhost:5000/users/getrequsers', requestOptions)
             .then(response => response.json())
             .then(users => this.setState({ reqUsers: users }))
     }
@@ -34,7 +34,7 @@ class AdminPanel extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('users/owner', requestOptions)
+        fetch('http://localhost:5000/users/owner', requestOptions)
             .then(response => response.json())
             .then(data => this.getUsers())
     }
@@ -45,7 +45,7 @@ class AdminPanel extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('users/removerequsers', requestOptions)
+        fetch('http://localhost:5000/users/removerequsers', requestOptions)
             .then(response => response.json())
             .then(data => this.getUsers())
     }
