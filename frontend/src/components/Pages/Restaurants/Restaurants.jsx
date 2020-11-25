@@ -34,7 +34,7 @@ class Restaurants extends React.Component {
         const {restaurants} = this.state
         return (
             <div>
-                <h1>Resturant</h1>
+                <h1 style={{textAlign:'center'}}>Resturant</h1>
                 <div className='restaurants'>
                 {
                     restaurants? restaurants.map( (rest , i) => <Restaurant restaurant={rest} key={i} /> ):<div></div>
