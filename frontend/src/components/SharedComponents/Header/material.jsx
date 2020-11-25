@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,11 +21,12 @@ export default function BasicButtonGroup() {
   return (
     <div className={classes.root}>
       <ButtonGroup color="primary" aria-label="outlined primary button group">
-        <Button>LogIn</Button>
-        <Button>SighUp</Button>
-        <Button>Go To Admin</Button>
-        <Button>Three</Button>
-        <Button>Three</Button>
+      <Link to='/login'><Button> Login </Button></Link> 
+      <Link to='/signup'><Button> SignUp</Button></Link> 
+      <Link to='/admin'><Button> Go to admin Panel </Button></Link>  
+      <Link to='/login'><Button> Login </Button></Link> 
+      <Link to='/login'><Button> Login </Button></Link> 
+      
         
 
       </ButtonGroup>

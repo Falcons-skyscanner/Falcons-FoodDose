@@ -7,6 +7,7 @@ import Restaurants from './components/Pages/Restaurants/Restaurants'
 import Menu from './components/Pages/Menu/Menu'
 import AdminPanel from './components/Pages/Panel/AdminPanel'
 import Header from './components/SharedComponents/Header/header'
+import Footer from './components/SharedComponents/Footer/footer'
 
 //My imports
 import Panel from './components/Pages/Panel/Panel'
@@ -81,11 +82,12 @@ class App extends Component {
                         <Route path="/restaurant/:id" exact component={Menu} />
 
                     </Switch>
+                    <Footer />
 
                 </div>
-                {/* <div className="footer">
-                    <Footer />
-                </div> */}
+                
+                   
+                
             </div>
         );
     }
