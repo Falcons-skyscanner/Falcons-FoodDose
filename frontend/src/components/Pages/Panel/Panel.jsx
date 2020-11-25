@@ -6,7 +6,7 @@ import './Panel.css'
 class Panel extends React.Component {
     constructor(){
         super()
-        
+
         this.state = {
             resName: '',
             resImg: '',
@@ -16,12 +16,9 @@ class Panel extends React.Component {
             restId: '',
             random: '',
             categories: [],
-    
+
         }
     }
-    
-
-    
 
     componentDidMount = () => {
         this.getCat()
@@ -108,26 +105,34 @@ class Panel extends React.Component {
                 <form className='Panel__resturant' onSubmit={this.handlerestSubmit}>
                     <h1> Add A resturant </h1>
                     <Input
+                        placeholder="Resturant Name"
                         type='text'
                         value={resName}
                         name='resName'
+                        className="addInput"
                         onChange={this.handleChange} />
                     <Input
+                        placeholder="Resturant Image"
                         type='text'
                         value={resImg}
                         name='resImg'
+                        className="addInput"
                         onChange={this.handleChange} />
                     <Input
+                        placeholder="Resturant phone"
                         type='text'
                         value={resPhone}
                         name='resPhone'
+                        className="addInput"
                         onChange={this.handleChange} />
                     <Input
+                        placeholder="Resturant Adress"
                         type='text'
                         value={resAddress}
                         name='resAddress'
+                        className="addInput"
                         onChange={this.handleChange} />
-                    <Button type='submit' variant="outlined" color="primary" > Add Res </Button>
+                    <Button type='submit' variant="outlined" color="primary" className="addInput addbut" > Add Resturant </Button>
                 </form>
                 {/* <h1> {catId} </h1> */}
             </div>

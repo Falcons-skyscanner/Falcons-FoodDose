@@ -13,6 +13,7 @@
 .Panel__resturant{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -28,4 +29,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.addInput {
+  margin-bottom: 2px;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-family:serif;
 }
