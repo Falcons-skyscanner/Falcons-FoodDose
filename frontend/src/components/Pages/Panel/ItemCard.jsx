@@ -8,36 +8,29 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-    root: {
-        maxWidth: 345,
-    },
-});
 
-export default function ItemCard({item,deleteItem}) {
-    const classes = useStyles();
+export default function ItemCard({ item, deleteItem }) {
+
 
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                {/* <CardMedia
+        <Card>
+            {/* <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
                     height="140"
                     image="/static/images/cards/contemplative-reptile.jpg"
                     title="Contemplative Reptile"
                 /> */}
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {item.type}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        ${item.price}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary" onClick={()=>deleteItem(item._id)}>
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                    {item.type}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    ${item.price}
+                </Typography>
+            </CardContent>
+            <CardActions className='item__detail'>
+                <Button size="small" color="primary" onClick={() => deleteItem(item._id)}>
                     delete
                 </Button>
 

@@ -1,7 +1,12 @@
 import React from 'react'
 import MenuItem from './MenuItem';
 import Restaurant from '../Restaurants/Restaurant'
+
+import { Button } from '@material-ui/core'
+import OpenSelect from '../../SharedComponents/OpenSelect'
+
 import StripeButton from './Stripe'
+
 import './Menu.css'
 
 const Menu = (props) => {
@@ -15,16 +20,20 @@ const Menu = (props) => {
         // console.log(getMenu);
         getMenu({ restId })
 
-        // console.log(menu)
 
-    }, [restId]);
+        // console.log(menu);
+        // return () => console.log('unmounting...')
+    }, [restId, food]);
+
 
     const addCartItem = (item) => {
         // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
         let arr = [...food]
         const exist = arr.find(cartItem => cartItem._id === item._id)
         if (exist) {
-            exist.count += 1
+
+            return
+
         } else {
             arr.push({ ...item, count: 1 })
         }
@@ -32,9 +41,34 @@ const Menu = (props) => {
 
     }
 
+    const removeCartItem = (item) => {
+        // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
+        let arr = [...food]
+        const exist = arr.find(cartItem => cartItem._id === item._id)
+        if (exist) {
+            console.log('>>>', arr.indexOf(exist));
+            arr.splice(arr.indexOf(exist), 1)
+        } else {
+            arr.push({ ...item, count: 1 })
+        }
+        setFood(arr)
+    }
+
+
+    const updateOpenSelect = (item, counter) => {
+        console.log(counter);
+        let arr = [...food]
+        const exist = arr.find(cartItem => cartItem._id === item._id)
+        exist.count = counter
+        setFood(arr)
+
+
+    }
+
     const price = (array) => {
 
         return array.reduce((acc, item) => acc + (item.price * item.count), 0)
+
 
 
     }
@@ -52,8 +86,10 @@ const Menu = (props) => {
 
 
     // console.log(props.match.params.id, menu);
+
     const newPrice = price(food)
     console.log(newPrice)
+
     return (
         <div className="restaurantMenu">
             <div className='restaurantDetail__menu'>
@@ -61,23 +97,28 @@ const Menu = (props) => {
                     menu[0] ?
                         <Restaurant restaurant={menu[0].resturant} /> : <div></div>
                 }
-                <div className='menu'>
-                    {
-                        menu[0] ?
-                            menu.map((item, i) => {
-                                return <MenuItem addCartItem={addCartItem} restaurantId={menu[0].resturant._id} item={item} key={i} />
-                            }) : <div></div>
-                    }
-                </div>
+            </div>
+            <div className='items__menu'>
+                {
+                    menu[0] ?
+                        menu.map((item, i) => {
+                            return <MenuItem addCartItem={addCartItem} restaurantId={menu[0].resturant._id} item={item} key={i} />
+                        }) : <div></div>
+                }
             </div>
             <div className='cart__menu'>
                 <h2>Cart</h2>
                 {
                     food.map((item, i) => {
-                        return <div key={i}>
-                            <h4>{item.type}</h4>
-                            <h5>${item.price}</h5>
-                            <h5>#{item.count}</h5>
+
+                        return <div key={i} className='cart__item'>
+                            <h4 className='cart__text'>{item.type}</h4>
+                            <div className='cart__price'>
+                                <p className='cart__text'>${item.price}</p>
+                                <div style={{ margin: "10px" }}>
+                                    <OpenSelect key={i} updateOpenSelect={updateOpenSelect} item={item} removeCartItem={removeCartItem} />
+                                </div>
+                            </div>
 
                         </div>
                     })

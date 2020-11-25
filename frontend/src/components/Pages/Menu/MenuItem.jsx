@@ -11,7 +11,6 @@ export default function ItemCard({restaurantId, item, addCartItem}) {
 
     return (
         <Card className="menuItem">
-            <CardActionArea>
                 {/* <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
@@ -19,16 +18,15 @@ export default function ItemCard({restaurantId, item, addCartItem}) {
                     image="/static/images/cards/contemplative-reptile.jpg"
                     title="Contemplative Reptile"
                 /> */}
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                <CardContent className="item__detail">
+                    <Typography gutterBottom variant="h6" component="h4">
                         {item.type}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         ${item.price}
                     </Typography>
                 </CardContent>
-            </CardActionArea>
-            <CardActions>
+            <CardActions className="item__detail">
                 <Button size="small" color="primary" onClick={()=>{addCartItem(item)}}>
                     Add to cart
                 </Button>
