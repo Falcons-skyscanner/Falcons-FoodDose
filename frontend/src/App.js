@@ -7,6 +7,7 @@ import Restaurants from './components/Pages/Restaurants/Restaurants'
 import Menu from './components/Pages/Menu/Menu'
 import AdminPanel from './components/Pages/Panel/AdminPanel'
 import Header from './components/SharedComponents/Header/header'
+import Profile from './components/Pages/profile/Profile'
 
 //My imports
 import Panel from './components/Pages/Panel/Panel'
@@ -50,8 +51,10 @@ class App extends Component {
                 } else {
                     localStorage.removeItem('userId')
                     localStorage.removeItem('adminId')
+                    localStorage.removeItem('ownerId')
                     this.setAdmin('')
                     this.setUser('')
+                    this.setOwner('')
                     this.setLogin(false)
                 }
             })
@@ -74,10 +77,11 @@ class App extends Component {
                 <div>
                     <Header adminId={adminId} ownerId={ownerId} userId={userId} setAdmin={this.setAdmin} setOwner={this.setOwner} setUser={this.setUser} login={login} setLogin={this.setLogin} />
                     <Switch>
-
+                    
 
                         <Route path="/panel" exact render={() => ownerId?  <Panel name={name} email={email} ownerId={ownerId}/> : <Redirect to='/' />} />
                         <Route path="/" exact render={() => <Home />} />
+                        <Route path="/profile" exact render={() => userId ? <Profile userId={userId} email={email} name={name} /> : <Redirect to='/' /> } />
                         <Route path="/admin" exact render={() => (adminId) ? <AdminPanel name={name} email={email} /> : <Redirect to='/' />} />
                         <Route path="/login" exact render={(props) => <Login setEmail={this.setEmail} setName={this.setName} setUser={this.setUser} setOwner={this.setOwner} setLogin={this.setLogin} setAdmin={this.setAdmin} otherProps={props} />} />
                         <Route path="/signup" exact render={(props) => <SignUp setEmail={this.setEmail} setName={this.setName} setLogin={this.setLogin} setUser={this.setUser} otherProps={props} />} />

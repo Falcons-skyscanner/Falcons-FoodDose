@@ -29,6 +29,7 @@ const StripeButton = ({ price, name, userId,restId,food }) => {
                         restId
                     })
                     alert('succesful payment')
+                    window.location='/profile'
                     
                 }
             })

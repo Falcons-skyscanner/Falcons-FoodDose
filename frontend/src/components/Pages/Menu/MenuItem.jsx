@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
-export default function ItemCard({restaurantId, item, addCartItem}) {
+export default function ItemCard({restaurantId, item, addItem}) {
 
     return (
         <Card className="menuItem">
@@ -27,7 +27,7 @@ export default function ItemCard({restaurantId, item, addCartItem}) {
                     </Typography>
                 </CardContent>
             <CardActions className="item__detail">
-                <Button size="small" color="primary" onClick={()=>{addCartItem(item)}}>
+                <Button size="small" color="primary" onClick={()=>{addItem(item)}}>
                     Add to cart
                 </Button>
             </CardActions>

@@ -11,18 +11,14 @@ class OpenSelect extends React.Component {
     }
 
     handleIncrement = async () => {
-        await this.setState({ counter: this.state.counter + 1 });
-        this.props.updateOpenSelect(this.props.item, this.state.counter)
+        this.props.addItem(this.props.item)
+        await this.setState({ counter: this.props.item.count });
+        // this.props.updateOpenSelect(this.props.item, this.state.counter)
     };
 
     handleDecrement = async () => {
-        console.log("DECR",this.props.item._id,this.props.item.count);
-        if (this.props.item.count > 1) {
-            await this.setState({ counter: this.state.counter - 1 });
-            this.props.updateOpenSelect(this.props.item, this.state.counter)
-        } else {
-            this.props.removeCartItem(this.props.item)
-        }
+        this.props.removeItem(this.props.item)
+        await this.setState({ counter: this.props.item.count });
     };
     render() {
         // console.log(this.props);
