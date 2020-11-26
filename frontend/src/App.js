@@ -51,8 +51,10 @@ class App extends Component {
                 } else {
                     localStorage.removeItem('userId')
                     localStorage.removeItem('adminId')
+                    localStorage.removeItem('ownerId')
                     this.setAdmin('')
                     this.setUser('')
+                    this.setOwner('')
                     this.setLogin(false)
                 }
             })

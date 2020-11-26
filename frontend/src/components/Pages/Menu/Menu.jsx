@@ -26,13 +26,14 @@ const Menu = (props) => {
     }, [restId, food]);
 
 
-    const addCartItem = (item) => {
+
+
+    const addItem = (item) => {
         // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
         let arr = [...food]
         const exist = arr.find(cartItem => cartItem._id === item._id)
         if (exist) {
-
-            return
+            exist.count += 1
 
         } else {
             arr.push({ ...item, count: 1 })
@@ -41,29 +42,30 @@ const Menu = (props) => {
 
     }
 
-    const removeCartItem = (item) => {
+    const removeItem = (item) => {
         // console.log("rest:", restaurantId, "item :", item._id, "user :", userId)
         let arr = [...food]
         const exist = arr.find(cartItem => cartItem._id === item._id)
-        if (exist) {
-            console.log('>>>', arr.indexOf(exist));
+        if (exist.count === 1) {
+            console.log(exist)
             arr.splice(arr.indexOf(exist), 1)
-        } else {
-            arr.push({ ...item, count: 1 })
+
+        }else{
+            arr[arr.indexOf(exist)].count -= 1
         }
+        
+        // arr = arr.map( (cartItem) => (
+        //     cartItem._id === item._id ? 
+        //     { ...cartItem, count: cartItem.count - 1 } : cartItem
+        // ) )
         setFood(arr)
+
     }
 
 
-    const updateOpenSelect = (item, counter) => {
-        console.log(counter);
-        let arr = [...food]
-        const exist = arr.find(cartItem => cartItem._id === item._id)
-        exist.count = counter
-        setFood(arr)
 
 
-    }
+
 
     const price = (array) => {
 
@@ -102,7 +104,7 @@ const Menu = (props) => {
                 {
                     menu[0] ?
                         menu.map((item, i) => {
-                            return <MenuItem addCartItem={addCartItem} restaurantId={menu[0].resturant._id} item={item} key={i} />
+                            return <MenuItem addItem={addItem} restaurantId={menu[0].resturant._id} item={item} key={i} />
                         }) : <div></div>
                 }
             </div>
@@ -116,7 +118,7 @@ const Menu = (props) => {
                             <div className='cart__price'>
                                 <p className='cart__text'>${item.price}</p>
                                 <div style={{ margin: "10px" }}>
-                                    <OpenSelect key={i} updateOpenSelect={updateOpenSelect} item={item} removeCartItem={removeCartItem} />
+                                    <OpenSelect key={i} item={item} addItem={addItem} removeItem={removeItem} />
                                 </div>
                             </div>
 
@@ -124,7 +126,7 @@ const Menu = (props) => {
                     })
                 }
                 {
-                    ((food.length > 0) && userId) ? <StripeButton name={props.name} food={food} restId={restId} userId={userId} price={newPrice}/> : <div>{userId ? 'Empty Card' : 'Login First to order please'}</div>
+                    ((food.length > 0) && userId) ? <StripeButton name={props.name} food={food} restId={restId} userId={userId} price={newPrice} /> : <div>{userId ? 'Empty Card' : 'Login First to order please'}</div>
                 }
             </div>
         </div>
